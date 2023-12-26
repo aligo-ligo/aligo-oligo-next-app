@@ -18,13 +18,6 @@
           ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"]
         ]
       }
-    ],
-    "simple-import-sort/exports": "warn",
-    "prettier/prettier": [
-      "error",
-      {
-        "endOfLine": "auto"
-      }
     ]
   }
 }
