@@ -7,6 +7,7 @@ import SplashBandiboodi from '@/assets/images/logo/oliBody.png';
 import LogoImage from '@/assets/images/logo/logo.png';
 import PurpleBlurImage from '@/assets/images/purple-blur.png';
 import { Typography } from '@/components/common';
+import { KakaoLoginButton } from '@/features/auth/components/KakaoLoginButton';
 // import { GoogleLoginButton } from '@/features/auth/components';
 
 const SplashPage = () => {
@@ -27,7 +28,7 @@ const SplashPage = () => {
         <Image src={SplashBandiboodi} width={240} alt="splash_bandiboodi" priority />
       </div>
       <div className="absolute bottom-[10px] w-full flex flex-col gap-3xs px-xs pb-[25px]">
-        {/* <GoogleLoginButton /> */}
+        <KakaoLoginButton />
         <Typography className="text-center text-gray-40" type="body3">
           회원가입 시{' '}
           <Link className=" underline" href="/">
