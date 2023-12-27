@@ -1,3 +1,4 @@
+import { fontSizes } from './styles/theme/fontsize';
 import type { Config } from 'tailwindcss'
 
 import { backgroundImage, borderRadius, boxShadow, colors, spacing } from './styles/theme';
@@ -15,6 +16,7 @@ const config: Config = {
       borderRadius,
       backgroundImage,
       boxShadow,
+      fontSizes,
       fontFamily: {
         sans: ['Pretendard', 'Arial', 'sans-serif'],
       },

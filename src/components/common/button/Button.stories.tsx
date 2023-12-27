@@ -9,7 +9,7 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     variant: {
       control: 'inline-radio',
-      options: ['heavy', 'blue', 'tertiary', 'issue'],
+      options: ['heavy', 'blue', 'tertiary', 'issue', 'primary'],
     },
     rounded: {
       control: 'inline-radio',
@@ -34,9 +34,22 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
+// export const Basic: Story = {
+//   args: {
+//     children: 'Button',
+//   },
+// };
+
 export const Basic: Story = {
   args: {
     children: 'Button',
+  },
+};
+
+export const Primary: Story = {
+  args: {
+    ...Basic.args,
+    variant: 'primary',
   },
 };
 
