@@ -1,4 +1,4 @@
-name: deploy to vercel by pushing git into another repo
+name: deploy to vercel by pushing git into personal repo
 
 on:
   push:
