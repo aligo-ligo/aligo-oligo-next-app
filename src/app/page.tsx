@@ -13,10 +13,10 @@ import { KakaoLoginButton } from '@/features/auth/components/KakaoLoginButton';
 const SplashPage = () => {
   return (
     <div className="relative w-full h-[100dvh] flex flex-col items-center overflow-hidden">
-      <div className="absolute top-0 right-0">
+      {/* <div className="absolute top-0 right-0">
         <Image src={PurpleBlurImage} sizes="100vw" alt="blur_image" />
-      </div>
-      <div className="w-full h-[60vh] bg-gradient5 flex flex-col items-center">
+      </div> */}
+      <div className="w-full h-[80vh] bg-gradient5 flex flex-col items-center">
         <div className="h-[38vh] flex flex-col gap-[1vh] z-10 justify-center">
           <Typography type="heading2" className="text-center bg-clip-text bg-gradient4 text-main-primaryDark">
             목표 달성을 <br /> 알리고 올리고
