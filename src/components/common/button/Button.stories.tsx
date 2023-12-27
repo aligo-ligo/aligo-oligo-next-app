@@ -9,7 +9,7 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     variant: {
       control: 'inline-radio',
-      options: ['heavy', 'blue', 'tertiary', 'issue', 'primary'],
+      options: ['heavy', 'green', 'tertiary', 'issue', 'primary'],
     },
     rounded: {
       control: 'inline-radio',
@@ -53,10 +53,10 @@ export const Primary: Story = {
   },
 };
 
-export const Blue: Story = {
+export const Green: Story = {
   args: {
     ...Basic.args,
-    variant: 'blue',
+    variant: 'green',
   },
 };
 

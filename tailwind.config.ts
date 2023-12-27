@@ -1,7 +1,7 @@
-import { fontSizes } from './styles/theme/fontsize';
+
 import type { Config } from 'tailwindcss'
 
-import { backgroundImage, borderRadius, boxShadow, colors, spacing } from './styles/theme';
+import { backgroundImage, borderRadius, boxShadow, colors, fontSizes,spacing } from './styles/theme';
 
 const config: Config = {
   content: [
@@ -10,6 +10,10 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
+    fontFamily: {
+      pretendard: ['Pretendard'],
+      insungit: ['InsungIt'],
+    },
     extend: {
       colors,
       spacing,

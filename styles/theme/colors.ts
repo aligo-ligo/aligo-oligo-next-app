@@ -31,7 +31,7 @@ export const colors = {
     10: '#E6F4FF',
   },
   main:{
-    primary : "#87995C",
+    primary : '#87995C',
     primaryHover : "#BACB91",
     primaryDark : "#52681D",
   },
@@ -39,6 +39,7 @@ export const colors = {
     success: "#4785FF",
     fail: "#ff3131",
     info: "#17a2b8",
-    warning: "#ffce21"},
+    warning: "#ffce21"
+  },
   current: 'currentColor',
 };
