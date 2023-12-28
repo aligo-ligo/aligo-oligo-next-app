@@ -9,6 +9,7 @@ import SplashBandiboodi from '@/assets/images/logo/oliBody.png';
 import { Typography } from '@/components/common';
 import { GoogleLoginButton } from '@/features/auth/components/GoogleLoginButton';
 import { KakaoLoginButton } from '@/features/auth/components/KakaoLoginButton';
+import StarBg from './home/startBg';
 // import { GoogleLoginButton } from '@/features/auth/components';
 
 const SplashPage = () => {
@@ -17,7 +18,7 @@ const SplashPage = () => {
       {/* <div className="absolute top-0 right-0">
         <Image src={PurpleBlurImage} sizes="100vw" alt="blur_image" />
       </div> */}
-
+      <StarBg />
       <div className="h-[38vh] flex flex-col gap-[1vh] z-10 justify-center">
         <Typography type="heading2" className="text-center bg-clip-text bg-gradient4 text-main-primaryDark">
           목표 달성을 <br /> 알리고 올리고
