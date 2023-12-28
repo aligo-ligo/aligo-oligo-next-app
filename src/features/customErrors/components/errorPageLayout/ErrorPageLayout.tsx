@@ -6,10 +6,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
-import OliErrorImage from '@/assets/images/error/loudOli.png';
 import Error404Image from '@/assets/images/error/404.png';
 import Error500Image from '@/assets/images/error/500.png';
 import ErrorTextImage from '@/assets/images/error/error.png';
+import OliErrorImage from '@/assets/images/error/loudOli.png';
 import { Button, Typography } from '@/components/common';
 
 interface ErrorPageLayoutProps {

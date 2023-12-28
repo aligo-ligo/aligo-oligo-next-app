@@ -3,12 +3,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import SplashBandiboodi from '@/assets/images/logo/oliBody.png';
 import LogoImage from '@/assets/images/logo/logo.png';
+import SplashBandiboodi from '@/assets/images/logo/oliBody.png';
 // import PurpleBlurImage from '@/assets/images/purple-blur.png';
 import { Typography } from '@/components/common';
-import { KakaoLoginButton } from '@/features/auth/components/KakaoLoginButton';
 import { GoogleLoginButton } from '@/features/auth/components/GoogleLoginButton';
+import { KakaoLoginButton } from '@/features/auth/components/KakaoLoginButton';
 // import { GoogleLoginButton } from '@/features/auth/components';
 
 const SplashPage = () => {
@@ -17,13 +17,12 @@ const SplashPage = () => {
       {/* <div className="absolute top-0 right-0">
         <Image src={PurpleBlurImage} sizes="100vw" alt="blur_image" />
       </div> */}
-      <div className="w-full h-[80vh] bg-gradient5 flex flex-col items-center">
-        <div className="h-[38vh] flex flex-col gap-[1vh] z-10 justify-center">
-          <Typography type="heading2" className="text-center bg-clip-text bg-gradient4 text-main-primaryDark">
-            목표 달성을 <br /> 알리고 올리고
-          </Typography>
-          <Image src={LogoImage} width={320} height={160} alt="logo" priority />
-        </div>
+
+      <div className="h-[38vh] flex flex-col gap-[1vh] z-10 justify-center">
+        <Typography type="heading2" className="text-center bg-clip-text bg-gradient4 text-main-primaryDark">
+          목표 달성을 <br /> 알리고 올리고
+        </Typography>
+        <Image src={LogoImage} width={320} height={160} alt="logo" priority />
       </div>
 
       <div className="absolute top-80 390:w-[50%] 390:top-48 flex justify-center">
