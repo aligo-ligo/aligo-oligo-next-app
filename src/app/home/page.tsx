@@ -4,14 +4,14 @@ import { Nav } from '@/components/sections/nav';
 
 import StarBg from './startBg';
 
-// export const test = {
-//   name: 'juyoung',
-// };
+export const test = {
+  name: 'juyoung',
+};
 
 const Home = () => {
   return (
     <div>
-      <Nav />
+      <Nav user={test} />
       <StarBg />
     </div>
   );
