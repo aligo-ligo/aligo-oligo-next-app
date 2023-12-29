@@ -20,7 +20,7 @@ const memberData = {
 export const TargetLayout = () => {
   const isGetTarget = true;
   return (
-    <section className="px-xs pt-lg">
+    <section className="px-xs py-md">
       <ContentWrapper
         title={
           <>
@@ -41,10 +41,18 @@ export const TargetLayout = () => {
           </>
         }
       >
-        <div className="pt-lg flex gap-4 flex-col">
-          {isGetTarget ? <TargetCard /> : <EmptyTargetCard alternativeTextIndex={1} />}
+        <div className="pt-lg ">
+          {isGetTarget ? (
+            <div className="flex gap-4 flex-col">
+              <TargetCard />
+              <TargetCard />
+              <TargetCard />
+            </div>
+          ) : (
+            <EmptyTargetCard alternativeTextIndex={1} />
+          )}
 
-          <Button variant={'heavy'} className="mt-8">
+          <Button variant={'heavy'} className="mt-8 ">
             <AddIcon />
           </Button>
         </div>

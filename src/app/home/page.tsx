@@ -9,10 +9,9 @@ export const test = {
 
 const Home = () => {
   return (
-    <div>
+    <div className="relative">
       <Nav user={test} />
       <StarBg />
-
       <TargetLayout />
     </div>
   );
