@@ -21,7 +21,7 @@ export const Nav = ({ user }: NavProps) => {
   console.log('test', user);
 
   return (
-    <div className="flex justify-between items-center w-full h-[44px] pt-xs px-xs">
+    <div className="flex justify-between items-center w-full h-[44px] px-xs pt-xs">
       <div className="flex justify-center items-center w-10 390:w-8">
         <Image
           src={LogoImage}

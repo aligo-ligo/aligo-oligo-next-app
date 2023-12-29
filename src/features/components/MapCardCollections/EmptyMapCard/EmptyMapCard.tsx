@@ -1,6 +1,9 @@
-import Image from 'next/image';
+'use client';
 
-import bandiboodiGray from '@/assets/images/bandi-boodi-gray.png';
+import Image from 'next/image';
+// import bandiboodiGray from '@/assets/images/bandi-boodi-gray.png';
+import oliBodyGray from '@/assets/images/logo/oliBody_gray.png';
+
 import { Typography } from '@/components/common';
 
 import { MapCardLayout, type MapCardLayoutProps } from '../MapCardLayout';
@@ -14,10 +17,10 @@ const EMPTY_ALTERNATIVE_TEXTS = ['나의 3년 후는?', '목표 생각중..', '�
 export const EmptyMapCard = ({ alternativeTextIndex, position }: EmptyMapCardProps) => {
   return (
     <MapCardLayout position={position} cursor="default">
-      <Image src={bandiboodiGray} width="100" height="100" alt="empty_goal" />
       <Typography type="title5" className="text-gray-40 text-center font-bold">
         {EMPTY_ALTERNATIVE_TEXTS[alternativeTextIndex]}
       </Typography>
+      <Image src={oliBodyGray} width="100" alt="empty_goal" />
     </MapCardLayout>
   );
 };

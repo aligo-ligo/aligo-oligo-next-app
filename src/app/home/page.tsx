@@ -1,5 +1,4 @@
-import React from 'react';
-
+import { TargetLayout } from '@/components/layouts/targetLayout';
 import { Nav } from '@/components/sections/nav';
 
 import StarBg from './startBg';
@@ -13,6 +12,8 @@ const Home = () => {
     <div>
       <Nav user={test} />
       <StarBg />
+
+      <TargetLayout />
     </div>
   );
 };
