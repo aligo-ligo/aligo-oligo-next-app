@@ -3,7 +3,8 @@ import React from 'react';
 import { Nav } from '@/components/sections/nav';
 
 import StarBg from './startBg';
-// const test = {
+
+// export const test = {
 //   name: 'juyoung',
 // };
 

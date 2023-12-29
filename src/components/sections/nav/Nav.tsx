@@ -1,13 +1,14 @@
 'use client';
 
-import React from 'react';
 import Image from 'next/image';
+import { useOverlay } from '@toss/use-overlay';
 
 import LogoImage from '@/assets/images/logo/oli.png';
-import { Button, Typography } from '@/components/common';
+import { Typography } from '@/components/common';
+import NavBottomSheet from '@/features/components/NavBottomSheet';
 
-// TODO : User type
-interface User {
+// TODO : recreate User type when api will be connected
+export interface User {
   name: string;
 }
 
@@ -15,11 +16,23 @@ interface NavProps {
   user?: User;
 }
 export const Nav = ({ user }: NavProps) => {
+  // const { value, setValue } = useState();
+  const overlay = useOverlay();
   console.log('test', user);
+
   return (
     <div className="flex justify-between items-center w-full h-[44px] pt-xs px-xs">
       <div className="flex justify-center items-center w-10 390:w-8">
-        <Image src={LogoImage} alt="nav_image" width={100} />
+        <Image
+          src={LogoImage}
+          alt="nav_image"
+          width={100}
+          onClick={() => {
+            overlay.open(({ isOpen, close }) => {
+              return <NavBottomSheet open={isOpen} onClose={close} user={user} />;
+            });
+          }}
+        />
       </div>
 
       {user ? (
@@ -27,14 +40,9 @@ export const Nav = ({ user }: NavProps) => {
           {user.name}의 타겟 모음
         </Typography>
       ) : (
-        <div className="flex gap-2">
-          <Button variant={'tertiary'} width={'full'} className="w-14 h-8">
-            <Typography type={'caption1'}>로그인</Typography>
-          </Button>
-          <Button variant={'primary'} width={'full'} className="w-14 h-8 ">
-            <Typography type={'caption1'}>회원가입</Typography>
-          </Button>
-        </div>
+        <Typography type={'subLabel1'} className="text-white">
+          로고를 눌러 로그인을 해주세요
+        </Typography>
       )}
     </div>
   );

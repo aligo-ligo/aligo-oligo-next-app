@@ -9,6 +9,7 @@ import SplashBandiboodi from '@/assets/images/logo/oliBody.png';
 import { Typography } from '@/components/common';
 import { GoogleLoginButton } from '@/features/auth/components/GoogleLoginButton';
 import { KakaoLoginButton } from '@/features/auth/components/KakaoLoginButton';
+
 import StarBg from './home/startBg';
 // import { GoogleLoginButton } from '@/features/auth/components';
 

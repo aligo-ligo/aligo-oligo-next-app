@@ -27,7 +27,8 @@
     "react-dom": "^18",
     "react-spring-bottom-sheet": "3.5.0-alpha.0",
     "zustand": "^4.4.7",
-    "@tanstack/react-query-devtools": "^5.8.8"
+    "@tanstack/react-query-devtools": "^5.8.8",
+    "react-hook-form": "^7.49.2"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.6",
