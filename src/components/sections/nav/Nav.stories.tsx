@@ -13,7 +13,9 @@ type Story = StoryObj<typeof Nav>;
 
 export const Basic: Story = {
   args: {
-    name: '이주영',
+    user: {
+      name: '이주영',
+    },
   },
   decorators: [
     (Story) => (
@@ -27,10 +29,7 @@ export const Basic: Story = {
   ],
 };
 
-export const WithoutName: Story = {
-  args: {
-    name: '',
-  },
+export const LoggedOut: Story = {
   decorators: [
     (Story) => (
       <div className="relative w-[390px] bg-main-primaryHover">
