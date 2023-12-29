@@ -1,9 +1,9 @@
 'use client';
 
+import AddIcon from '@/assets/icons/goal/add-icon.svg';
 import { Button } from '@/components/common';
 import { ContentWrapper } from '@/components/sections/contentWrapper';
-import { EmptyMapCard } from '@/features/components/MapCardCollections';
-import AddIcon from '@/assets/icons/goal/add-icon.svg';
+import { EmptyTargetCard, TargetCard } from '@/features/components/MapCardCollections';
 
 interface TargetLayout {
   children: React.ReactNode;
@@ -18,6 +18,7 @@ const memberData = {
 };
 
 export const TargetLayout = () => {
+  const isGetTarget = true;
   return (
     <section className="px-xs pt-lg">
       <ContentWrapper
@@ -41,7 +42,7 @@ export const TargetLayout = () => {
         }
       >
         <div className="pt-lg flex gap-4 flex-col">
-          <EmptyMapCard alternativeTextIndex={1} />
+          {isGetTarget ? <TargetCard /> : <EmptyTargetCard alternativeTextIndex={1} />}
 
           <Button variant={'heavy'} className="mt-8">
             <AddIcon />

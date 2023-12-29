@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import type { EmptyMapCard } from '../EmptyMapCard/EmptyMapCard';
+import type { EmptyMapCard } from '../EmptyTargetCard/EmptyTargetCard';
 
 import { StartMapCard } from './StartMapCard';
 

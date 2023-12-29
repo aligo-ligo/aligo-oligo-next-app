@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { EmptyMapCard } from './EmptyMapCard';
+import { EmptyTargetCard } from './EmptyTargetCard';
 
-const meta: Meta<typeof EmptyMapCard> = {
+const meta: Meta<typeof EmptyTargetCard> = {
   title: 'features/home/TargetCard/emptyTargetCard',
-  component: EmptyMapCard,
+  component: EmptyTargetCard,
   argTypes: {
     alternativeTextIndex: {
       control: 'inline-radio',
@@ -15,7 +15,7 @@ const meta: Meta<typeof EmptyMapCard> = {
 
 export default meta;
 
-type Story = StoryObj<typeof EmptyMapCard>;
+type Story = StoryObj<typeof EmptyTargetCard>;
 
 export const Basic: Story = {
   args: {
