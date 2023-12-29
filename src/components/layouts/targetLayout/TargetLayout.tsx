@@ -1,7 +1,9 @@
 'use client';
 
+import { Button } from '@/components/common';
 import { ContentWrapper } from '@/components/sections/contentWrapper';
 import { EmptyMapCard } from '@/features/components/MapCardCollections';
+import AddIcon from '@/assets/icons/goal/add-icon.svg';
 
 interface TargetLayout {
   children: React.ReactNode;
@@ -38,8 +40,12 @@ export const TargetLayout = () => {
           </>
         }
       >
-        <div className="pt-lg flex gap-4">
+        <div className="pt-lg flex gap-4 flex-col">
           <EmptyMapCard alternativeTextIndex={1} />
+
+          <Button variant={'heavy'} className="mt-8">
+            <AddIcon />
+          </Button>
         </div>
       </ContentWrapper>
     </section>
