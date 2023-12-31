@@ -11,6 +11,7 @@ import DetailLayout from './TargetDetailLayout';
 
 const TargetDetailContent = ({ id }: { id: number }) => {
   const router = useRouter();
+
   console.log(id, router);
 
   const test = {
