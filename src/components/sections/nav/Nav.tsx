@@ -36,11 +36,11 @@ export const Nav = ({ user }: NavProps) => {
       </div>
 
       {user ? (
-        <Typography type={'subLabel1'} className="text-white">
+        <Typography type={'subLabel1'} className="">
           {user.name}의 타겟 모음
         </Typography>
       ) : (
-        <Typography type={'subLabel1'} className="text-white">
+        <Typography type={'subLabel1'} className="">
           로고를 눌러 로그인을 해주세요
         </Typography>
       )}
