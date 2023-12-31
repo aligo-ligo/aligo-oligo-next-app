@@ -6,6 +6,7 @@ import { Nav } from '@/components/sections/nav';
 
 import DetailLayout from './TargetDetailLayout';
 import ContentBody from './ContentBody';
+import { Modal } from '@/components/modal';
 
 const TargetDetailContent = ({ id }: { id: number }) => {
   const router = useRouter();
@@ -19,7 +20,7 @@ const TargetDetailContent = ({ id }: { id: number }) => {
       header={<Nav user={test} />}
       //   sticker={<Sticker />}
       body={<ContentBody />}
-      //   footer={<DetailFooterButton />}
+      footer={<Modal buttonName="공유" />}
     />
   );
 };
