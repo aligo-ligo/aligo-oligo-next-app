@@ -9,10 +9,6 @@ interface TargetLayout {
   children: React.ReactNode;
 }
 
-// export const TargetLayout = ({ children }: TargetLayout) => {
-//   return <div>{children}</div>;
-// };
-
 const memberData = {
   nickname: '이주영',
 };
@@ -22,7 +18,7 @@ export const TargetLayout = () => {
   return (
     <>
       <ContentWrapper
-        sectionStyles="h-[100dvh] overflow-y-scroll pt-sm px-xs pb-[25px]"
+        sectionStyles="h-[75dvh] overflow-y-scroll pt-sm px-xs "
         title={
           <>
             {/* {!memberData?.nickname && (
@@ -57,7 +53,7 @@ export const TargetLayout = () => {
           )}
         </div>
       </ContentWrapper>
-      <div className="absolute bottom-[10px] w-full flex flex-col px-xs pb-[25px]">
+      <div className="absolute bottom-0 w-full flex flex-col px-xs py-[25px]">
         <Button variant={'heavy'} className="">
           <AddIcon />
         </Button>
