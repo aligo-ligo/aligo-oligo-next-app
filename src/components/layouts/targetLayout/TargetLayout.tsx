@@ -20,8 +20,9 @@ const memberData = {
 export const TargetLayout = () => {
   const isGetTarget = true;
   return (
-    <section className="px-xs py-md">
+    <>
       <ContentWrapper
+        sectionStyles="h-[100dvh] overflow-y-scroll pt-sm px-xs pb-[25px]"
         title={
           <>
             {/* {!memberData?.nickname && (
@@ -41,9 +42,12 @@ export const TargetLayout = () => {
           </>
         }
       >
-        <div className="pt-lg ">
+        <div className="pt-lg">
           {isGetTarget ? (
             <div className="flex gap-4 flex-col">
+              <TargetCard />
+              <TargetCard />
+              <TargetCard />
               <TargetCard />
               <TargetCard />
               <TargetCard />
@@ -51,12 +55,13 @@ export const TargetLayout = () => {
           ) : (
             <EmptyTargetCard alternativeTextIndex={1} />
           )}
-
-          <Button variant={'heavy'} className="mt-8 ">
-            <AddIcon />
-          </Button>
         </div>
       </ContentWrapper>
-    </section>
+      <div className="absolute bottom-[10px] w-full flex flex-col px-xs pb-[25px]">
+        <Button variant={'heavy'} className="">
+          <AddIcon />
+        </Button>
+      </div>
+    </>
   );
 };
