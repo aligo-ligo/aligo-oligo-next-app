@@ -1,8 +1,11 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import DetailLayout from './TargetDetailLayout';
+
 import { Nav } from '@/components/sections/nav';
+
+import DetailLayout from './TargetDetailLayout';
+import ContentBody from './ContentBody';
 
 const TargetDetailContent = ({ id }: { id: number }) => {
   const router = useRouter();
@@ -15,7 +18,7 @@ const TargetDetailContent = ({ id }: { id: number }) => {
     <DetailLayout
       header={<Nav user={test} />}
       //   sticker={<Sticker />}
-      //   body={<ContentBody />}
+      body={<ContentBody />}
       //   footer={<DetailFooterButton />}
     />
   );
