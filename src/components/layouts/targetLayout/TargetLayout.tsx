@@ -1,10 +1,11 @@
 'use client';
 
+import Link from 'next/link';
+
 import AddIcon from '@/assets/icons/goal/add-icon.svg';
 import { Button } from '@/components/common';
 import { ContentWrapper } from '@/components/sections/contentWrapper';
 import { EmptyTargetCard, TargetCard } from '@/features/components/MapCardCollections';
-import Link from 'next/link';
 
 interface TargetLayout {
   children: React.ReactNode;
