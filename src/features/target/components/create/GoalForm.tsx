@@ -11,6 +11,8 @@ import { TargetType } from '@/features/target/types';
 
 import FormLayout from './FormLayout';
 import { TextInput } from './TextInput';
+import FormHeader from './FormHeader';
+import { NEW_GOAL_FORM_ORDERS } from '../../constants';
 
 // import { NEW_GOAL_FORM_ORDERS } from '../../constants';
 
@@ -23,7 +25,7 @@ const GoalForm = () => {
 
   return (
     <FormLayout
-      header={''}
+      header={<FormHeader formNumber={NEW_GOAL_FORM_ORDERS.goal} />}
       comment={
         <Typography type="title3" className="text-gray-50 font-insungit text-center">
           목표를 설정해보자
