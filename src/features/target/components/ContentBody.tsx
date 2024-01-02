@@ -1,9 +1,10 @@
+import { useForm } from 'react-hook-form';
+import Link from 'next/link';
+
 import { Typography } from '@/components/common';
 import { Checkbox } from '@/components/common/checkbox';
 import { Modal } from '@/components/modal';
 import { ProgressBar } from '@/components/progress';
-import Link from 'next/link';
-import { useForm } from 'react-hook-form';
 
 const ContentBody = () => {
   const form = useForm();
