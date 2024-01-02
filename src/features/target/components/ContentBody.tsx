@@ -5,6 +5,7 @@ import { Typography } from '@/components/common';
 import { Checkbox } from '@/components/common/checkbox';
 import { Modal } from '@/components/modal';
 import { ProgressBar } from '@/components/progress';
+import { TargetShareContent } from '@/components/modal/modalContents';
 
 const ContentBody = () => {
   const form = useForm();
@@ -45,7 +46,7 @@ const ContentBody = () => {
             공유 후, 친구에게 보여질 페이지로 이동
           </Typography>
         </Link>
-        <Modal buttonName="목표 공유하기" />
+        <Modal title="목표 공유" buttonName="목표 공유하기" content={<TargetShareContent />} footer={false} />
       </div>
     </>
   );

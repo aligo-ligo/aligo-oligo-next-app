@@ -5,10 +5,10 @@ import { Button } from '../common';
 
 export interface ModalProps {
   buttonName: string;
-  title: string;
-  Description: string | ReactNode;
+  title?: string;
+  Description?: string | ReactNode;
   content: ReactNode;
-  footer: boolean;
+  footer?: boolean;
 }
 
 export const Modal = ({ buttonName, content, title, Description, footer = true }: ModalProps) => {
