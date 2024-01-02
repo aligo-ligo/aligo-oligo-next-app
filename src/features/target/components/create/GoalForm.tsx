@@ -23,7 +23,7 @@ const GoalForm = () => {
 
   return (
     <FormLayout
-      header={'df'}
+      header={''}
       comment={
         <Typography type="title3" className="text-gray-50 font-insungit text-center">
           목표를 설정해보자
@@ -63,7 +63,7 @@ const GoalForm = () => {
         </div>
       }
       footer={
-        <Link href="/goal/new/date">
+        <Link href="/target/create/specific">
           <Button disabled={value ? value.length === 0 : true}>다음</Button>
         </Link>
       }
