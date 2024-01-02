@@ -9,10 +9,11 @@ import { Button, Span, Typography } from '@/components/common';
 import NavBottomSheet from '@/features/components/NavBottomSheet';
 import { TargetType } from '@/features/target/types';
 
+import { NEW_GOAL_FORM_ORDERS } from '../../constants';
+
+import FormHeader from './FormHeader';
 import FormLayout from './FormLayout';
 import { TextInput } from './TextInput';
-import FormHeader from './FormHeader';
-import { NEW_GOAL_FORM_ORDERS } from '../../constants';
 
 // import { NEW_GOAL_FORM_ORDERS } from '../../constants';
 

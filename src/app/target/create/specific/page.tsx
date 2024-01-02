@@ -1,7 +1,9 @@
 'use client';
 
+import { SpecificForm } from '@/features/target/components/create/SpecificForm';
+
 const CreateSpecificGoalPage = () => {
-  return <div>Specific</div>;
+  return <SpecificForm />;
 };
 
 export default CreateSpecificGoalPage;
