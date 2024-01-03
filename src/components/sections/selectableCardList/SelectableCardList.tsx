@@ -24,7 +24,7 @@ export const SelectableCardList = ({ items, onClick }: SelectableCardListProps) 
             <Typography type="title3" className="text-gray-50">
               {item.content}
             </Typography>
-            <CheckIcon className="fill-gray-40 group-focus:fill-purple-40 group-hover:fill-purple-40" />
+            <CheckIcon className="fill-gray-40 group-focus:main-primary-30 group-hover:fill-main-primary-30" />
           </div>
         </button>
       ))}

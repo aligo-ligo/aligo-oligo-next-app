@@ -9,7 +9,7 @@ const spanVariants = cva('whitespace-pre-line', {
       form: 'text-gray-30 group-focus:text-purple-40 group-hover:text-purple-40',
       blue55: 'text-blue-55',
       blue50: 'text-blue-50',
-      primary: 'text-main-primaryDark',
+      primary: 'text-main-primary-80',
       secondary: 'text-main-secondary',
     },
   },
