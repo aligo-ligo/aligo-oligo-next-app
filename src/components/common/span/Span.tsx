@@ -6,7 +6,7 @@ import { cva } from 'class-variance-authority';
 const spanVariants = cva('whitespace-pre-line', {
   variants: {
     type: {
-      form: 'text-gray-30 group-focus:text-purple-40 group-hover:text-purple-40',
+      form: 'text-gray-30 group-focus:text-main-primary-80 group-hover:text-main-primary-80',
       blue55: 'text-blue-55',
       blue50: 'text-blue-50',
       primary: 'text-main-primary-80',

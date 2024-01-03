@@ -68,7 +68,7 @@ const Header = ({ items }: TabsProps) => (
       {items.map((item, index) => (
         <Tabs.Trigger
           key={index}
-          className="space-x-4xs h-[45px] flex-grow items-center justify-center text-gray-40 hover:text-purple-80 data-[state=active]:text-purple-80 data-[state=active]:shadow-[inset_0_-1px_0_0,0_1px_0_0] data-[state=active]:shadow-current data-[state=active]:focus:relative"
+          className="space-x-4xs h-[45px] flex-grow items-center justify-center text-gray-40 hover:text-main-secondaryHover data-[state=active]:text-main-secondary data-[state=active]:shadow-[inset_0_-1px_0_0,0_1px_0_0] data-[state=active]:shadow-current data-[state=active]:focus:relative"
           value={`tab${index + 1}`}
         >
           <Typography type="subLabel1">{item.label}</Typography>
