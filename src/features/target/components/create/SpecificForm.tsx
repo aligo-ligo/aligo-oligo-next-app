@@ -1,6 +1,6 @@
 'use client';
 
-import { useController, useFormContext } from 'react-hook-form';
+import { useController, useFieldArray, useFormContext } from 'react-hook-form';
 import Link from 'next/link';
 
 import { Button, Span, Typography } from '@/components/common';
@@ -15,11 +15,20 @@ import FormLayout from './FormLayout';
 
 export const SpecificForm = () => {
   const { register, getValues, control } = useFormContext<TargetType>();
+
+  const {
+    fields: subGoal,
+    // append: subGoalAppend,
+    // remove: subGoalRemove,
+  } = useFieldArray({
+    name: 'subGoal', // unique name for your Field Array
+  });
   const { field } = useController({ name: 'goal', control });
   const { value } = field;
-  console.log(value);
+  console.log('etsetset', value);
   const { goal } = getValues();
 
+  console.log('subGoal', subGoal);
   return (
     <FormLayout
       header={<FormHeader formNumber={NEW_GOAL_FORM_ORDERS.specific} />}
