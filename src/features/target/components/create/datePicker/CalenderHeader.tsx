@@ -3,6 +3,10 @@
 
 import dayjs from 'dayjs';
 
+import BackIcon from '@/assets/icons/goal/back-icon.svg';
+import NextIcon from '@/assets/icons/goal/next-icon.svg';
+import { Typography } from '@/components/common';
+
 interface Props {
   date: Date;
   decreaseMonth(): void;
@@ -10,26 +14,16 @@ interface Props {
 }
 
 const CalenderHeader = ({ date, decreaseMonth, increaseMonth }: Props) => {
-  //   const dateToString = monthFormatDate(date);
-  // 리팩토링 day.js를 활용하여 한줄로 구현
-  // export const monthFormatDate = (d: Date): string => {
-  //   const date = new Date(d);
-  //   const monthIndex = date.getMonth() + 1;
-  //   const year = date.getFullYear();
-  //   return `${year}년 ${`0${monthIndex}`.slice(-2)}월`;
-  // };
-
   const dateToString = dayjs(date).format('YYYY년 MM월 DD일');
-  console.log('dateToString 자체 typeof', typeof dateToString);
 
   return (
-    <div className="p-2 flex justify-evenly items-center">
-      <button type="button" onClick={decreaseMonth} className="text-3xl text-white">
-        {/* <FiChevronsLeft /> */}
+    <div className="p-2 flex justify-evenly items-center ">
+      <button type="button" onClick={decreaseMonth}>
+        <BackIcon />
       </button>
-      <div className="">{dateToString}</div>
-      <button type="button" onClick={increaseMonth} className="text-3xl text-white">
-        {/* <FiChevronsRight /> */}
+      <Typography type="title1">{dateToString}</Typography>
+      <button type="button" onClick={increaseMonth} className="">
+        <NextIcon />
       </button>
     </div>
   );

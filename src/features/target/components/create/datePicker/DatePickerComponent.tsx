@@ -1,16 +1,20 @@
+'use client';
+
+import ReactDatePicker from 'react-datepicker';
 import { useFormContext } from 'react-hook-form';
+
 import CalenderHeader from './CalenderHeader';
 
 import 'react-datepicker/dist/react-datepicker.css';
-import ReactDatePicker from 'react-datepicker';
+import dayjs from 'dayjs';
 
 type Props = {
   endDate: string;
 };
 
 const DatePickerComponent = ({ endDate }: Props) => {
-  console.log(endDate);
-  // 요일 반환
+  const endDatetoDate = dayjs(endDate).toDate();
+
   const getDayName = (date: Date) => {
     return date
       .toLocaleDateString('ko-KR', {
@@ -18,19 +22,21 @@ const DatePickerComponent = ({ endDate }: Props) => {
       })
       .substr(0, 1);
   };
-
   const createDate = (date: Date) => {
     return new Date(new Date(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0, 0));
   };
+
   const { register, setValue } = useFormContext();
   return (
     <ReactDatePicker
       dateFormat={`yyyy년 MM월 dd일`}
-      className="placeholder:text-s w-full h-10 outline-none text-emerald-800 border-b-2 border-main"
+      className="p-3xs flex w-full rounded-md bg-white placeholder-gray-30 border border-gray-20 shadow-thumb\
+      focus-visible:border-main-priamry-30
+      focus-visible:outline-none"
       {...register('endDate')}
-      //   selected={Date(endDate)}
       onChange={(date) => setValue('endDate', date, { shouldValidate: true })}
-      placeholderText="날짜를 선택해주세요"
+      selected={endDatetoDate || ''}
+      placeholderText="언제까지 달성하시고 싶으세요?"
       isClearable
       withPortal
       minDate={new Date()}

@@ -2,6 +2,7 @@
 
 import { useController, useFieldArray, useFormContext } from 'react-hook-form';
 import Link from 'next/link';
+import { useOverlay } from '@toss/use-overlay';
 
 import { Button, Span, Typography } from '@/components/common';
 // import { MAX_DATE_LENGTH_UNTIL_MONTH } from '@/constants';
@@ -12,9 +13,8 @@ import { NEW_GOAL_FORM_ORDERS } from '../../constants';
 // import { DateInput } from './DateInput';
 import FormHeader from './FormHeader';
 import FormLayout from './FormLayout';
-import { TextInput } from './TextInput';
-import { useOverlay } from '@toss/use-overlay';
 import GoalGuideBottomSheet from './GoalGuideBottomSheet';
+import { TextInput } from './TextInput';
 
 export const SpecificForm = () => {
   const overlay = useOverlay();
