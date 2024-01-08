@@ -1,10 +1,12 @@
 'use client';
 
 import { useController, useFormContext } from 'react-hook-form';
+import Image from 'next/image';
 import Link from 'next/link';
 // import Link from 'next/link';
 import { useOverlay } from '@toss/use-overlay';
 
+import Oli from '@/assets/images/logo/oliBody.png';
 import { Button, Span, Typography } from '@/components/common';
 import { TargetType } from '@/features/target/types';
 
@@ -35,35 +37,38 @@ const GoalForm = () => {
         </Typography>
       }
       body={
-        <div {...register('goal')} className="pt-sm h-full flex flex-col">
-          <TextInput
-            labelName="최상위 목표"
-            value={value}
-            maxLength={30}
-            placeholder="ex) IT 개발 동아리 시작하기"
-            onChange={onChange}
-          />
-          <div className="pb-lg flex flex-col justify-end grow items-center gap-5xs">
-            <Typography type="caption1" className="text-gray-40">
-              목표 세우기, 너무 막연하다면?
-            </Typography>
-            <div className="w-[200px]">
-              <Button
-                className="py-3xs px-xs text-sm"
-                variant="green"
-                height="h44"
-                rounded="xl"
-                onClick={() => {
-                  overlay.open(({ isOpen, close }) => {
-                    return <GoalGuideBottomSheet open={isOpen} onClose={close} setValue={setValue} />;
-                  });
-                }}
-              >
-                가이드 보고 목표 세우기
-              </Button>
+        <>
+          <Image className="absolute top-[28%] left-1/3 w-1/3 z-[1]" src={Oli} alt="BandiBoodi Character" priority />
+          <div {...register('goal')} className="pt-sm h-full flex flex-col">
+            <TextInput
+              labelName="최상위 목표"
+              value={value}
+              maxLength={30}
+              placeholder="ex) IT 개발 동아리 시작하기"
+              onChange={onChange}
+            />
+            <div className="pb-lg flex flex-col justify-end grow items-center gap-5xs">
+              <Typography type="caption1" className="text-gray-40">
+                목표 세우기, 너무 막연하다면?
+              </Typography>
+              <div className="w-[200px]">
+                <Button
+                  className="py-3xs px-xs text-sm"
+                  variant="green"
+                  height="h44"
+                  rounded="xl"
+                  onClick={() => {
+                    overlay.open(({ isOpen, close }) => {
+                      return <GoalGuideBottomSheet open={isOpen} onClose={close} setValue={setValue} />;
+                    });
+                  }}
+                >
+                  가이드 보고 목표 세우기
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
+        </>
       }
       footer={
         <Link href="/target/create/specific">

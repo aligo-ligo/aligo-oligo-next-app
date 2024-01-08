@@ -2,11 +2,11 @@
 
 import ReactDatePicker from 'react-datepicker';
 import { useFormContext } from 'react-hook-form';
+import dayjs from 'dayjs';
 
 import CalenderHeader from './CalenderHeader';
 
 import 'react-datepicker/dist/react-datepicker.css';
-import dayjs from 'dayjs';
 
 type Props = {
   endDate: string;
