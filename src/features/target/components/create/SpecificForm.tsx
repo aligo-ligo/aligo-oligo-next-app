@@ -18,7 +18,7 @@ import GoalGuideBottomSheet from './GoalGuideBottomSheet';
 
 export const SpecificForm = () => {
   const overlay = useOverlay();
-  const { register, setValue, getValues, control } = useFormContext<TargetType>();
+  const { setValue, getValues, control } = useFormContext<TargetType>();
 
   const { field } = useController({ name: 'goal', control });
   const { value } = field;
@@ -72,7 +72,7 @@ export const SpecificForm = () => {
 };
 
 export const SubGoalSection = () => {
-  const { register, getValues, control } = useFormContext<TargetType>();
+  // const { register, getValues, control } = useFormContext<TargetType>();
   const {
     // fields: subGoal,
     // append: subGoalAppend,
@@ -94,7 +94,7 @@ export const SubGoalSection = () => {
 };
 
 export const RoutineSection = () => {
-  const { register, getValues, control } = useFormContext<TargetType>();
+  // const { register, getValues, control } = useFormContext<TargetType>();
   const {
     // fields: routine,
     // append: routineAppend,
