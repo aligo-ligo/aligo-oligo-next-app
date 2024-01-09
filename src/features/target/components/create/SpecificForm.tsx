@@ -5,12 +5,10 @@ import Link from 'next/link';
 import { useOverlay } from '@toss/use-overlay';
 
 import { Button, Span, Typography } from '@/components/common';
-// import { MAX_DATE_LENGTH_UNTIL_MONTH } from '@/constants';
 import type { TargetType } from '@/features/target/types';
 
 import { NEW_GOAL_FORM_ORDERS } from '../../constants';
 
-// import { DateInput } from './DateInput';
 import FormHeader from './FormHeader';
 import FormLayout from './FormLayout';
 import GoalGuideBottomSheet from './GoalGuideBottomSheet';
@@ -36,10 +34,10 @@ export const SpecificForm = () => {
         </Typography>
       }
       body={
-        <div className="pt-sm h-full flex flex-col">
+        <div className="mt-xl h-full flex flex-col overflow-hidden overflow-y-scroll">
           <SubGoalSection />
           <RoutineSection />
-          <div className="pb-lg flex flex-col justify-end grow items-center gap-5xs">
+          <div className="py-4 flex flex-col justify-end grow items-center gap-5xs">
             <Typography type="caption1" className="text-gray-40">
               목표 세우기, 너무 막연하다면?
             </Typography>
@@ -74,21 +72,30 @@ export const SpecificForm = () => {
 export const SubGoalSection = () => {
   // const { register, getValues, control } = useFormContext<TargetType>();
   const {
-    // fields: subGoal,
+    fields: subGoal,
     // append: subGoalAppend,
     // remove: subGoalRemove,
   } = useFieldArray({
     name: 'subGoal', // unique name for your Field Array
   });
+
+  const isFirstElementIdOfSubGoal = subGoal[0].id;
+
   return (
     <>
-      <TextInput
-        labelName="하위 목표"
-        value={'test'}
-        maxLength={100}
-        placeholder="ex) IT 개발 동아리 시작하기"
-        // onChange={onChange}
-      />
+      {subGoal.map((field) => {
+        return (
+          <div key={field.id} className="pt-4">
+            <TextInput
+              labelName={isFirstElementIdOfSubGoal === field.id ? '하위 목표' : ''}
+              value={'test'}
+              maxLength={30}
+              placeholder="ex) IT 개발 동아리 시작하기"
+              // onChange={onChange}
+            />
+          </div>
+        );
+      })}
     </>
   );
 };
@@ -96,22 +103,29 @@ export const SubGoalSection = () => {
 export const RoutineSection = () => {
   // const { register, getValues, control } = useFormContext<TargetType>();
   const {
-    // fields: routine,
+    fields: routine,
     // append: routineAppend,
     // remove: routineRemove,
   } = useFieldArray({
     // shouldUnregister: true, 컴포넌트가 사라지면 unRegister이 되도록 !
     name: 'routine', // unique name for your Field Array
   });
+  const isFirstElementIdOfRoutine = routine[0].id;
   return (
-    <div className="pt-sm">
-      <TextInput
-        labelName="루틴 작성"
-        value={'test'}
-        maxLength={100}
-        placeholder="ex) IT 개발 동아리 시작하기"
-        // onChange={onChange}
-      />
-    </div>
+    <>
+      {routine.map((field) => {
+        return (
+          <div key={field.id} className="pt-4">
+            <TextInput
+              labelName={isFirstElementIdOfRoutine === field.id ? '루틴 작성' : ''}
+              value={'test'}
+              maxLength={30}
+              placeholder="ex) IT 개발 동아리 시작하기"
+              // onChange={onChange}
+            />
+          </div>
+        );
+      })}
+    </>
   );
 };

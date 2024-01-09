@@ -12,8 +12,8 @@ const CreateGoalFormProvider = ({ children }: PropsWithChildren) => {
   const methods = useForm<TargetType>({
     defaultValues: {
       //UI에 표현하기 위해 defaultValue 지정
-      subGoal: [{}, {}],
-      routine: [{}, {}],
+      subGoal: [{}],
+      routine: [{}],
     },
   });
 
